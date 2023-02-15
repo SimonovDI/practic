@@ -88,6 +88,7 @@
 #             print(f"{z:>2d}",end= ' ')
 #     lst = []
 #     print()
+<<<<<<< HEAD
 #
 #
 # Правильный вариант!
@@ -106,11 +107,17 @@
 #         print(f"{z:>{ln}d}", end=' ')
 #     lst = []
 #     print()
+=======
+>>>>>>> b36c870 (first commit)
 # ************************************************************************
 # Задача 1
 # Создать декоратор, который вычисляет и выводит (через print) время работы декорируемой функции
 # При каждом вызове декорируемой функции печатать имя функции и сколько она выполнялась.
+<<<<<<< HEAD
 #
+=======
+
+>>>>>>> b36c870 (first commit)
 # from datetime import datetime
 #
 #
@@ -119,10 +126,15 @@
 #
 #     def wrapper(*args, **kwargs):
 #         counters[func] = counters.get(func, 0) + 1
+<<<<<<< HEAD
 #         start = datetime.now()
 #         res = func(*args, **kwargs)
 #         end = datetime.now() - start
 #         print(f"время работы функции: {func.__name__}: {end}")
+=======
+#         res = func(*args, **kwargs)
+#         print(f"время работы функции: {func.__name__}")
+>>>>>>> b36c870 (first commit)
 #         print(f'функция {func.__name__} вызвана {counters[func]} раз')
 #         return res
 #
@@ -131,10 +143,15 @@
 #
 # @times
 # def iter(n, b):
+<<<<<<< HEAD
+=======
+#     start = datetime.now()
+>>>>>>> b36c870 (first commit)
 #     lst = []
 #     for i in range(n ** b):
 #         if i % 2 == 0:
 #             lst.append(i)
+<<<<<<< HEAD
 #
 #     return lst
 #
@@ -142,6 +159,16 @@
 # p1 = iter(2, 25)
 # print(p1)
 # ************************************************************************
+=======
+#     end = datetime.now() - start
+#     print(end)
+#     return lst
+#
+#
+# p1 = iter(10, 4)
+# print(p1)
+#************************************************************************
+>>>>>>> b36c870 (first commit)
 # Задача 2
 # Изучить функцию wraps (from functools import wraps) и применить её к декоратору из прошлой задачи
 
@@ -178,6 +205,7 @@
 # p1 = iter(2, 6)
 # print(iter.__name__)
 # print(iter.__doc__)
+<<<<<<< HEAD
 # print(p1)
 
 # Задача 3
@@ -405,3 +433,6 @@
 # next(z)
 # z.send(100)
 # z.send(1)
+=======
+# print(p1)
+>>>>>>> b36c870 (first commit)
