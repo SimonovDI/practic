@@ -12,8 +12,7 @@ class Account:
 
     @hash_func.setter
     def hash_func(self, password):
-        self._password = password
-        return hash(password)
+        self._password = hash(password)
 
 
 p1 = Account('Ivan', 123456)

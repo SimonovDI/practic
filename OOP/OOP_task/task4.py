@@ -7,11 +7,8 @@ class Lenta:
 
     @property
     def count_itog(self):
-        count = 0
-        total = (self._title + self._txt).replace(' ', '')
-        for i in range(len(total)):
-            count += 1
-        return count
+        total = len((self._title + self._txt).replace(' ', ''))
+        return total
 
     @count_itog.setter
     def count_itog(self, title, txt):
