@@ -1,0 +1,24 @@
+# Создайте класс, который представляет собой пользовательскую учетную запись с атрибутами имени пользователя и пароля.
+# Используя property, реализуйте методы для получения и установки хеш-значения пароля.
+
+class Account:
+    def __init__(self, name, password):
+        self._name = name
+        self._password = password
+
+    @property
+    def hash_func(self):
+        if not isinstance(self._name, str):
+            raise TypeError("Error name")
+        else:
+            return self._password
+
+    @hash_func.setter
+    def hash_func(self, password):
+        self._password = hash(password)
+
+
+p1 = Account('Ivan', 123456)
+print(type(p1.hash_func))
+
+
