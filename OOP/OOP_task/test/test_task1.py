@@ -1,17 +1,17 @@
 import pytest
 from OOP_task.task1 import Area
 
-
-class TestArea:
-    def __init__(self, x, y, z):
-        self.x = x
-        self.y = y
-        self.z = z
-
-    def value(self):
-        return self.x * self.y * self.z
+"""ожидаемое значение"""
 
 
-def test_value():
-    obj = TestArea(2, 2, 2)
-    assert obj.value() == 8
+def test_value_int():
+    obj = Area(2, 2, 2)
+    assert obj.val == 8
+
+
+""" Проверка функции на значение int"""
+
+
+def test_value_str():
+    obj = Area(2, 2, 2)
+    assert obj.val == int(obj.value)

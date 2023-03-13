@@ -8,7 +8,10 @@ class Account:
 
     @property
     def hash_func(self):
-        return self._password
+        if not isinstance(self._name, str):
+            raise TypeError("Error name")
+        else:
+            return self._password
 
     @hash_func.setter
     def hash_func(self, password):
@@ -16,4 +19,6 @@ class Account:
 
 
 p1 = Account('Ivan', 123456)
-print(p1.hash_func)
+print(type(p1.hash_func))
+
+

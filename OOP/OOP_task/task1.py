@@ -11,6 +11,7 @@ class Area:
     def val(self):
         return self._length * self._width * self._height
 
+
     @val.setter
     def value(self, val):
         if val <= 0:
@@ -23,5 +24,3 @@ class Area:
 
 p1 = Area(2, 2, 2)
 print(p1.value)
-
-

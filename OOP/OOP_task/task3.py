@@ -6,9 +6,11 @@ class Shopping_list:
         self._spisok = spisok
 
     @property
-    def lst(self):
+    def get_lst_count(self):
+        if len(self._spisok) <= 0:
+            raise TypeError('No data')
         return len(self._spisok)
 
 
 p1 = Shopping_list(['яблоко', 'груша', 'банан'])
-print(p1.lst)
+print(p1.get_lst_count)
