@@ -8,12 +8,15 @@ class Area:
         self._height = height
 
     @property
-    def val(self):
-        return self._length * self._width * self._height
+    def volume(self):
+        total = self._length * self._width * self._height
+        if isinstance(total, int):
+            return total
+        else:
+            raise TypeError("Error data value is int")
 
-
-    @val.setter
-    def value(self, val):
+    @volume.setter
+    def volume(self, val):
         if val <= 0:
             raise ValueError("Volume must be positive")
         factor = (val / self._length * self._width * self._height) ** (1 / 3)
@@ -23,4 +26,4 @@ class Area:
 
 
 p1 = Area(2, 2, 2)
-print(p1.value)
+print(p1.volume)

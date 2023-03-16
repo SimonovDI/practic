@@ -1,10 +1,15 @@
 import pytest
 
-from OOP_task.task2 import Account
+from OOP.OOP_task.task2 import Account
 
-"""Проверяем Имя на строковое значение"""
+"""Возвращается hash """
 
 
-def test_hash_func():
-    obj = Account('Ivan', 123456)
-    assert obj.hash_func != str
+def test_hash_password():
+    obj = Account('Ivan', "querty")
+    assert obj.hash_password == hash("querty")
+
+
+
+
+
