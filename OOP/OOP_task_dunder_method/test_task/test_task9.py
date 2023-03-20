@@ -1,6 +1,8 @@
 import pytest
 from OOP.OOP_task_dunder_method.task9 import Student
 
+""" test task9"""
+
 
 def test_class_student():
     obj1 = Student('Sidorov', [4, 4, 3, 5])
